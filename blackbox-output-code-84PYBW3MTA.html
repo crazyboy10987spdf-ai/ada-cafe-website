@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ada Cafe - Where Taste Meets Elegance. Premium cafe in Rawatpur, Kanpur offering quality coffee, food, and ambiance. Book a table or order online.">
+    <meta name="keywords" content="Cafe in Rawatpur Kanpur, Ada Cafe, coffee, food, table booking, online orders">
+    <title>Ada Cafe - Where Taste Meets Elegance</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <h1 class="logo">Ada Cafe</h1>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#booking">Book Table</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="cart-icon" id="cart-icon"><i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span></div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Ada Cafe – Where Taste Meets Elegance</h1>
+            <p>Sip the Style, Taste the Ada</p>
+            <div class="cta-buttons">
+                <a href="#booking" class="btn primary">Book a Table</a>
+                <a href="#menu" class="btn secondary">Order Now</a>
+                <a href="tel:[Add mobile number here]" class="btn secondary">Call Now</a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=800&h=600&fit=crop" alt="Ada Cafe Interior" loading="lazy">
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Ada Cafe, we blend the finest ingredients with a passion for perfection. Nestled in Roshan Nagar, Rawatpur, Kanpur, our cafe offers an elegant ambiance where every cup of coffee and bite of food is crafted to delight. From premium brews to exquisite pastries, we prioritize quality, taste, and customer satisfaction. Join us for an unforgettable experience.</p>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-grid" id="menu-grid">
+                <!-- Products loaded via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-cart">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p>Total: ₹<span id="cart-total">0</span></p>
+            <button class="btn primary" id="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <h2>Book a Table</h2>
+            <form id="booking-form">
+                <input type="text" id="booking-name" placeholder="Name" required>
+                <input type="tel" id="booking-phone" placeholder="Phone" required>
+                <input type="date" id="booking-date" required>
+                <input type="time" id="booking-time" required>
+                <input type="number" id="booking-guests" placeholder="Number of Guests" min="1" required>
+                <button type="submit" class="btn primary">Book Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2>Customer Reviews</h2>
+            <div class="average-rating">Average Rating: <span id="avg-rating">0</span> ⭐</div>
+            <div id="reviews-list"></div>
+            <form id="review-form">
+                <input type="text" id="review-name" placeholder="Name" required>
+                <div class="stars" id="rating-stars">
+                    <i class="fas fa-star" data-rating="1"></i>
+                    <i class="fas fa-star" data-rating="2"></i>
+                    <i class="fas fa-star" data-rating="3"></i>
+                    <i class="fas fa-star" data-rating="4"></i>
+                    <i class="fas fa-star" data-rating="5"></i>
+                </div>
+                <textarea id="review-text" placeholder="Your Review" required></textarea>
+                <button type="submit" class="btn primary">Submit Review</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=300&fit=crop" alt="Cafe Interior" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=400&h=300&fit=crop" alt="Coffee" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&h=300&fit=crop" alt="Food" loading="lazy">
+                <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=300&fit=crop" alt="Ambiance" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p><strong>Address:</strong> Roshan Nagar, Rawatpur, Kanpur, Uttar Pradesh, India</p>
+                <p><strong>Contact:</strong> [Add mobile number here]</p>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.5!2d80.3!3d26.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjYuNTAwMDAwMDAwMDAwMCw4MC4zMDAwMDAwMDAwMDAw!5e0!3m2!1sen!2sin!4v1630000000000!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+            <form id="contact-form">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Message" required></textarea>
+                <button type="submit" class="btn primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Ada Cafe. All rights reserved.</p>
+            <p>Timings: Mon-Sun 8 AM - 10 PM</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
